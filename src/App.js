@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Employee from "./pages/Employee";
 import Employees from "./pages/Employees";
 import Login from "./pages/Login";
 
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/" element={<Login />} />
           <Route path="users" element={<Users />} />
           <Route path="employees" element={<Employees />} />
+          <Route path="employee" element={<Employee />} />
         </Routes>
       </Router>
     </div>

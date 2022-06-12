@@ -1,10 +1,24 @@
 import React from "react";
+import Employee from "../pages/Employee";
 
-const EmployeeCard = ({ name, company, designation, company_logo, key }) => {
+import { Link } from "react-router-dom";
+
+const EmployeeCard = ({
+  id,
+  name,
+  company,
+  designation,
+  company_logo,
+  key,
+}) => {
+  let idData = { id: id };
+
   return (
-    <div
+    <Link
       className="flex justify-center ml-10 mt-10 w-96 cursor-pointer"
       key={key}
+      to="/employee"
+      state={idData}
     >
       <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
         <img
@@ -18,7 +32,7 @@ const EmployeeCard = ({ name, company, designation, company_logo, key }) => {
           <p className="text-gray-600 text-xs">{designation}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

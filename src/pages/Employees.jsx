@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import EmployeeCard from "../components/EmployeeCard";
 import Loader from "../components/Loader";
-import UserCard from "../components/UserCard";
 
 const Employees = () => {
   const [employees, setEmployees] = useState([]);
@@ -31,6 +30,7 @@ const Employees = () => {
       <div className="flex flex-wrap justify-center">
         {employees.map((employee) => (
           <EmployeeCard
+            id={employee.id}
             key={employee.id}
             name={employee.name}
             company={employee.name}
