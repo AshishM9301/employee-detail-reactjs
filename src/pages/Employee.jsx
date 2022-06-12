@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import Loader from "../components/Loader";
 
@@ -13,6 +13,7 @@ const Employee = ({ id }) => {
 
   useEffect(() => {
     getEmployees();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
 
   const getEmployees = async () => {
