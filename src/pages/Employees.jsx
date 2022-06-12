@@ -8,6 +8,7 @@ const Employees = () => {
 
   useEffect(() => {
     getEmployees();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getEmployees = async () => {

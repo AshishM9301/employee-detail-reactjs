@@ -1,5 +1,4 @@
 import React from "react";
-import Employee from "../pages/Employee";
 
 import { Link } from "react-router-dom";
 
